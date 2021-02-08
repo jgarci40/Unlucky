@@ -4,9 +4,10 @@ buildscript {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:4.1.2'
     }
 }
 
@@ -27,6 +28,7 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        google()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
     }
@@ -71,8 +73,8 @@ project(":core") {
 
 
     dependencies {
-        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
     }
 }
 
